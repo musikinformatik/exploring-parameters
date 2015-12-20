@@ -48,7 +48,7 @@ The process of interchanging parameters is equivalent to changing the order in w
 |1-2  |   -1   |    1     |   1       |
 |3    |    1   |    2     |   1       |
 |4    |    1   |    3     |   1       |
---------------------------------------
+
 |num   | P1 {2} |   P2 {3} |  EVAL {2} |
 |:-----|:-------|:--------:|----------:|
 |1-3-4 |    1   |   -1     |   1       |
