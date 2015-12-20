@@ -34,12 +34,15 @@ It should be noted that the resulting set depends on the placing order of the pa
 |2    |    1   |    2     |   1       |
 |3    |    2   |    1     |   1       |
 |4    |    3   |    1     |   1       |
+
 The resulting set applying the basic strict compaction is:
+
 |num   | P2 {3} |   P1 {2} |  EVAL {2} |
 |:-----|:-------|:--------:|----------:|
 |1-3-4 |   -1   |    1     |   1       |
 |   2  |    1   |    2     |   1       |
 The process of interchanging parameters is equivalent to changing the order in which we consider the parameters to perform the search of possible sets for compaction (see next table). To refer to the different sets of rules obtained in each case, we will name the different orders of parameters by its permutation number or explicitly writing the permutation. Formalizing, we can say that with our original data we have two compaction orders (name [0,1] and [1,0]) depending on which parameter we consider first for searching the possible sets for compaction. Then, compacting first in order [0,1] and then in order [1,0], in our example we have the resulting sets:
+
 |num  | P1 {2} |   P2 {3} |  EVAL {2} |
 |:----|:-------|:--------:|----------:|
 |1-2  |   -1   |    1     |   1       |
