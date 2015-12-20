@@ -58,8 +58,8 @@ If we look at the rules of the last two tables, we can see that the rules descri
 
 ##Playing
 After the rule extraction process, the different rules can be used to play with. To access the rules we use:
-//get rule (permutation, classifier, which)
-~getRule.(0, \A, 0);
+//get rule (permutation, classifier, which)<br/>
+~getRule.(0, \A, 0); <br/>
 Then, we remap the values to our system. In this implementation the values of the -1s are randomly selected among all the possible values of the parameter (or free variable).
 For example:
 ~rule = ~getRule.(0, \A, 5); //rule for remapping
