@@ -6,6 +6,7 @@ The process starts with a parametric system in which different sets of parameter
 
 ##Basic strict compaction
 This module takes as input the set of evaluated sets or instances. Then, it performs an iterative process searching (in the given order) for each parameter (Pi), sets of instances containing all the possible values of that parameter, and sharing the same values in the rest of the parameters and in the evaluation. In that case, we can consider that Pi do not determine the class of the evaluation, given that, as long as all the other parameters have those values, the output will be the same. Then, the set of instances is compacted into one rule having a "-1" in the place of Pi, indicating that this parameter was compressed. For convention, sets having -1s are referred as rules and sets without -1 as instances. A simple example of this process is shown in the table below. Parameters P1 and P2 can take {2} and {3} discrete values, respectively, and each set can be evaluated in one of two classes {2}. In this case let us suppose that all the instances were evaluated as 1.
+
 |num  | P1 {2} |   P2 {3} |  EVAL {2} |
 |:----|:-------|:--------:|----------:|
 |1    |    1   |    1     |   1       |
