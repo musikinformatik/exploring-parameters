@@ -57,16 +57,16 @@ We are assuming that parameter combinations represent discrete points in the par
 If we look at the rules of the last two tables, we can see that the rules describe the same data in different ways. For our purposes we wanted to keep all the sets as valid descriptions of the information. There are many reasons to do that. For example, if we classify each instance assigning the part of the piece in which the setting can be used as class, (e.g. part A, part B, part C) we can see the -1 as free parameters, i.e parameters that can be changed to play or add variability to the part without stepping out of the desired part. In other words we want to have the greatest pallet of possibilities first, and later take the desired decisions on these sets. For that reason, the algorithm starts creating all the possible permutations in the input data, and then it applies strict compaction to each set. This algorithm returns all rule sets of the different permutations.
 
 ##Playing
-After the rule extraction process, the different rules can be used to play with. To access the rules we use:
-//get rule (permutation, classifier, which)<br/>
+After the rule extraction process, the different rules can be used to play with. To access the rules we use: <br/>
+//get rule (permutation, classifier, which) <br/>
 ~getRule.(0, \A, 0); <br/>
 Then, we remap the values to our system. In this implementation the values of the -1s are randomly selected among all the possible values of the parameter (or free variable).
-For example:
-~rule = ~getRule.(0, \A, 5); //rule for remapping
-~rule.pop; //eliminate the rule classifier for remapping
-//mapping the indexes
-~mapIndices.(~rule, x)
-//set parameter values into Ndef
+For example: </br>
+~rule = ~getRule.(0, \A, 5); //rule for remapping <br/>
+~rule.pop; //eliminate the rule classifier for remapping <br/>
+//mapping the indexes <br/>
+~mapIndices.(~rule, x) <br/>
+//set parameter values into Ndef <br/>
 Ndef(\x).set(*~mapIndices.(~rule, x));
 
 
