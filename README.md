@@ -16,15 +16,18 @@ This module takes as input the set of evaluated sets or instances. Then, it perf
 
 Considering P1, instances 1 and 2 form a set containing all possible values of P1, and share the same values in P2 and in the evaluation. Then, the set is compacted into rule -1 1 1.
 The set of rules is now written as:
+
 |num  | P1 {2} |   P2 {3} |  EVAL {2} |
 |:----|:-------|:--------:|----------:|
 |1-2  |   -1   |    1     |   1       |
 |3    |    1   |    2     |   1       |
 |4    |    1   |    3     |   1       |
+
 When we consider P2 in the resulting set, we can see that instances 3 and 4 share values in P1 and EVAL. However, rule 1-2 does not share the same value in P1. Then, although all possible values of P2 are present in the set, this cannot be compacted. Note that when the equality of the parameter values is checked the -1s are included.
 
 ##All permutations
 It should be noted that the resulting set depends on the placing order of the parameters. For example, if we interchange the order of the parameters (P1 and P2) in the original set we have:
+
 |num  | P2 {3} |   P1 {2} |  EVAL {2} |
 |:----|:-------|:--------:|----------:| 
 |1    |    1   |    1     |   1       |
