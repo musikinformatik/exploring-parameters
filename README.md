@@ -58,17 +58,23 @@ If we look at the rules of the last two tables, we can see that the rules descri
 
 ##Playing
 After the rule extraction process, the different rules can be used to play with. To access the rules we use: <br/>
-//get rule (permutation, classifier, which) <br/>
-~getRule.(0, \A, 0); <br/>
+
+<pre>
+// get rule (permutation, classifier, which)
+~getRule.(0, \A, 0);
+</pre>
+
 Then, we remap the values to our system. In this implementation the values of the -1s are randomly selected among all the possible values of the parameter (or free variable).
-For example: </br>
+For example:
+
+<pre>
 ~rule = ~getRule.(0, \A, 5); //rule for remapping <br/>
 ~rule.pop; //eliminate the rule classifier for remapping <br/>
-//mapping the indexes <br/>
+// mapping the indexes <br/>
 ~mapIndices.(~rule, x) <br/>
-//set parameter values into Ndef <br/>
+// set parameter values into Ndef <br/>
 Ndef(\x).set(*~mapIndices.(~rule, x));
-
+</pre>
 
 ##References
 F. Castro, À. Nebot, and F. Mugica, 2011. “On the extraction of decision support rules from fuzzy predictive models”. Applied Soft Computing, 11 (4), 3463-3475.	
